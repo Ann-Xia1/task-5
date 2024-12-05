@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getWords(words) {
+            str = words.join(" ");
+            console.log(str);
+            r = /\b[qwertyuiopQWERTYUIOP]+\b|\b[asdfghjklASDFGHJKL]+\b|\b[zxcvbnmZXCVBNM]+\b/g;
+            var res = str.match(r);
+            return res;
+        }
+
+        var words = ["Hello","Alaska","Dad","Peace","Tree"];
+        console.log(getWords(words));
+    </script>
+</body>
+</html>

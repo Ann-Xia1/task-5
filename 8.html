@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function parseRomeNumber(rome) {
+            var romeValue = {
+                I : 1,
+                V : 5,
+                X : 10,
+                L : 50,
+                C : 100,
+                D : 500,
+                M : 1000
+            };
+            var sum =romeValue[rome[rome.length - 1]];
+            for (var i = rome.length - 2; i >= 0; i--) {
+                if (romeValue[rome[i]] < romeValue[rome[i + 1]]) {
+                    sum -= romeValue[rome[i]];
+                } else {
+                    sum += romeValue[rome[i]];
+                }
+            }
+            return sum;
+        }
+
+        console.log(parseRomeNumber("II"));
+        console.log(parseRomeNumber("VI"));
+        console.log(parseRomeNumber("IV"));
+        console.log(parseRomeNumber("CD"));
+    </script>
+</body>
+</html>

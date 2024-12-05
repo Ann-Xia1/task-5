@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function intersectionNum(nums1,nums2) {
+            var nums3 = [];
+            for(var i = 0; i < nums1.length; i++) {
+                for(var j = 0; j < nums2.length; j++) {
+                    if(i === nums1.indexOf(nums1[i]) && nums1[i] === nums2[j] && j === nums2.indexOf(nums2[j])) {
+                        nums3.push(nums1[i]);
+                    }
+                }
+            }
+            return nums3;
+        }
+
+        console.log(intersectionNum([1,2,2,1],[2,2]));
+        console.log(intersectionNum([4,9,5],[9,4,9,8,4]));
+    </script>
+</body>
+</html>

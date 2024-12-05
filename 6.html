@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var key = /^((?=.*[A-Z])(?=.*\d)|(?=.*[a-z])(?=.*\d)|(?=.*[A-Z])(?=.*[a-z]))(.{8,14})$/;
+        console.log(key.test("X123Y456w"));
+        console.log(key.test("ASDFadfdsf"));
+        console.log(key.test("X1123456"));
+        console.log(key.test("assddddff"));
+        console.log(key.test("2331123456"));
+        console.log(key.test("ASDFadfdsf1123434332"));
+    </script>
+</body>
+</html>

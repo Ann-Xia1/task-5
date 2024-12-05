@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var key = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(.{8,})$/;
+        console.log(key.test("X123456aRRw"));
+        console.log(key.test("ASDFadfdsf"));
+        console.log(key.test("X1123456"));
+    </script>
+</body>
+</html>
